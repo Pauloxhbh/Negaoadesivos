@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Negão Adesivos - Sobre Nós</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  /* ===== GRADIENTE DE FUNDO ===== */
+  #sobre {
+    background: linear-gradient(135deg, #ffe75e, #ffba00);
+    color: #222;
+    padding: 6rem 2rem;
+    text-align: center;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1.5s ease forwards;
+  }
+
+  #sobre h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  #sobre p {
+    max-width: 700px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+  }
+
+  /* ===== ANIMAÇÃO FADE-IN ===== */
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  /* RESPONSIVO */
+  @media(max-width:600px) {
+    #sobre h2 { font-size: 2rem; }
+    #sobre p { font-size: 1rem; padding: 0 1rem; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <a href="index.html" class="logo"><img src="logo-negao-adesivos.png" alt="Negão Adesivos"></a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="sobre.html" class="active">Sobre Nós</a>
+    <a href="contato.html">Contato</a>
+  </nav>
+</header>
+
+<section id="sobre">
+  <h2>Sobre Nós</h2>
+  <p>
+    A <strong>Negão Adesivos</strong> é referência em adesivagem e envelopamento em Rio Largo - AL.  
+    Trabalhamos com veículos, fachadas, vitrines e projetos personalizados.  
+    Nosso objetivo é transformar sua ideia em arte visual de alta qualidade.
+  </p>
+</section>
+
+<footer>
+  <p>© 2025 Negão Adesivos — Todos os direitos reservados</p>
+</footer>
+</body>
+</html>
