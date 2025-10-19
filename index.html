@@ -1,304 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Negão Adesivos</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #333;
-      background-color: #f7f7f7;
-    }
-
-    /* ===== HEADER ===== */
-    header {
-      background: #222;
-      color: white;
-      padding: 0.8rem 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo img {
-      height: 60px;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
-    .logo img:hover {
-      transform: scale(1.05);
-    }
-
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      align-items: center;
-    }
-
-    nav li {
-      margin-left: 1rem;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #f7d038;
-    }
-
-    /* ===== HERO ===== */
-    .hero {
-      text-align: center;
-      padding: 2.5rem 1rem;
-      background: linear-gradient(135deg, #ffe75e, #ffba00);
-      color: #222;
-    }
-
-    .hero h1 {
-      margin: 0;
-      font-size: 2.3rem;
-    }
-
-    .hero p {
-      margin-top: 0.5rem;
-      font-size: 1.1rem;
-    }
-
-    /* ===== GALERIA ===== */
-    .galeria {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1rem;
-      padding: 2rem 1rem;
-    }
-
-    .projeto {
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      overflow: hidden;
-      background: white;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.2s ease;
-    }
-
-    .projeto:hover {
-      transform: translateY(-3px);
-    }
-
-    .img-container {
-      position: relative;
-      width: 100%;
-      padding-top: 65%;
-      overflow: hidden;
-    }
-
-    .img-container img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: opacity 0.5s ease;
-    }
-
-    .img-antes {
-      opacity: 0;
-    }
-
-    .img-container:hover .img-antes {
-      opacity: 1;
-    }
-
-    .img-container:hover .img-depois {
-      opacity: 0;
-    }
-
-    .descricao {
-      padding: 0.8rem;
-      font-size: 1rem;
-      text-align: center;
-      background: #fff;
-    }
-
-    /* ===== SOBRE ===== */
-    section#sobre {
-      background: #fff;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-
-    section#sobre h2 {
-      color: #222;
-    }
-
-    section#sobre p {
-      max-width: 600px;
-      margin: auto;
-      font-size: 1rem;
-      line-height: 1.6;
-    }
-
-    /* ===== CONTATO ===== */
-    section#contato {
-      padding: 2rem 1rem;
-      background: #fafafa;
-      text-align: center;
-    }
-
-    section#contato h2 {
-      margin-bottom: 0.5rem;
-    }
-
-    section#contato p {
-      margin: 0.3rem 0;
-      font-size: 1rem;
-    }
-
-    iframe {
-      width: 100%;
-      height: 300px;
-      border: none;
-      margin-top: 1rem;
-      border-radius: 10px;
-    }
-
-    /* ===== FOOTER ===== */
-    footer {
-      background: #222;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-      font-size: 0.9rem;
-    }
-
-    /* ===== BOTÃO WHATSAPP ===== */
-    .whatsapp-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25d366;
-      color: white;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      font-size: 2rem;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      z-index: 999;
-    }
-
-    .whatsapp-btn:hover {
-      background: #1ebe5b;
-    }
-
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-      }
-      nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      nav li {
-        margin: 0.5rem;
-      }
-    }
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Negão Adesivos - Home</title>
+<link rel="stylesheet" href="style.css">
 </head>
+<body>
+<header>
+  <a href="index.html" class="logo"><img src="logo-negao-adesivos.png" alt="Negão Adesivos"></a>
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="sobre.html">Sobre Nós</a>
+    <a href="contato.html">Contato</a>
+  </nav>
+</header>
 
-<body id="topo">
-  <!-- ===== HEADER ===== -->
-  <header>
-    <a href="#topo" class="logo">
-      <img src="logo-negao-adesivos.png" alt="Negão Adesivos">
-    </a>
+<section class="hero">
+  <h1>Transformamos ideias em adesivos incríveis!</h1>
+  <p>Conheça alguns dos projetos realizados em Rio Largo - AL</p>
+</section>
 
-    <nav>
-      <ul>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- ===== HERO ===== -->
-  <section class="hero">
-    <h1>Transformamos ideias em adesivos incríveis!</h1>
-    <p>Conheça alguns dos projetos realizados em Rio Largo - AL</p>
-  </section>
-
-  <!-- ===== GALERIA ===== -->
-  <section id="projetos" class="galeria">
-    <div class="projeto">
-      <div class="img-container">
-        <img src="depois1.jpg" alt="Depois" class="img-depois" />
-        <img src="antes1.jpg" alt="Antes" class="img-antes" />
-      </div>
-      <div class="descricao">Adesivo automotivo personalizado</div>
+<section class="galeria">
+  <div class="projeto">
+    <div class="img-container">
+      <img src="depois1.jpg" class="img-depois" alt="Depois">
+      <img src="antes1.jpg" class="img-antes" alt="Antes">
     </div>
-
-    <div class="projeto">
-      <div class="img-container">
-        <img src="depois2.jpg" alt="Depois" class="img-depois" />
-        <img src="antes2.jpg" alt="Antes" class="img-antes" />
-      </div>
-      <div class="descricao">Adesivagem de vitrine comercial</div>
+    <div class="descricao">Adesivo automotivo personalizado</div>
+  </div>
+  <div class="projeto">
+    <div class="img-container">
+      <img src="depois2.jpg" class="img-depois" alt="Depois">
+      <img src="antes2.jpg" class="img-antes" alt="Antes">
     </div>
-
-    <div class="projeto">
-      <div class="img-container">
-        <img src="depois3.jpg" alt="Depois" class="img-depois" />
-        <img src="antes3.jpg" alt="Antes" class="img-antes" />
-      </div>
-      <div class="descricao">Envelopamento de moto</div>
+    <div class="descricao">Adesivagem de vitrine comercial</div>
+  </div>
+  <div class="projeto">
+    <div class="img-container">
+      <img src="depois3.jpg" class="img-depois" alt="Depois">
+      <img src="antes3.jpg" class="img-antes" alt="Antes">
     </div>
-  </section>
+    <div class="descricao">Envelopamento de moto</div>
+  </div>
+</section>
 
-  <!-- ===== SOBRE ===== -->
-  <section id="sobre">
-    <h2>Sobre nós</h2>
-    <p>
-      A <strong>Negão Adesivos</strong> é referência em adesivagem e envelopamento em Rio Largo - AL.  
-      Trabalhamos com veículos, fachadas, vitrines e projetos personalizados.  
-      Nosso objetivo é transformar sua ideia em arte visual de alta qualidade.
-    </p>
-  </section>
+<a class="whatsapp-btn" href="https://wa.me/5582999999999" target="_blank">💬</a>
 
-  <!-- ===== CONTATO ===== -->
-  <section id="contato">
-    <h2>Contato</h2>
-    <p><strong>Telefone / WhatsApp:</strong> (82) 9 9999-9999</p>
-    <p><strong>Endereço:</strong> Rua Intendente Júlio Calheiros, Principal da Mata do Rolo, Rio Largo - AL (Ao lado da Copy Van Impressos)</p>
-    <p>Siga-nos nas redes sociais para ver mais trabalhos!</p>
-
-    <!-- ===== MAPA GOOGLE ===== -->
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3948.3696963089473!2d-35.83646952418425!3d-9.477593683061252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x70146d36fbaaaef%3A0x3d2d796d3ab6c2a0!2sNeg%C3%A3o%20Adesivos!5e0!3m2!1spt-BR!2sbr!4v1729277853001!5m2!1spt-BR!2sbr" 
-      allowfullscreen="" 
-      loading="lazy" 
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-  </section>
-
-  <!-- ===== WHATSAPP FIXO ===== -->
-  <a class="whatsapp-btn" href="https://wa.me/5582999999999" target="_blank">💬</a>
-
-  <!-- ===== FOOTER ===== -->
-  <footer>
-    <p>© 2025 Negão Adesivos — Todos os direitos reservados</p>
-  </footer>
+<footer>
+  <p>© 2025 Negão Adesivos — Todos os direitos reservados</p>
+</footer>
 </body>
-  </html>
+</html>
