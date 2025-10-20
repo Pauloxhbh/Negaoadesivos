@@ -1,42 +1,47 @@
-/* ======== Reset e Fonte ======== */
+/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
 }
 
 body {
-  background: linear-gradient(135deg, #fdd835, #ffeb3b);
-  color: #333;
-  line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+  background: #0e0e0e;
+  color: #f1f1f1;
 }
 
-/* ======== Header ======== */
+/* ===== HEADER ===== */
 header {
-  background: #1c1c1c;
+  background: #000;
   color: #fff;
-  padding: 15px 0;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.7);
 }
 
 header img {
-  height: 80px;
-  width: auto;
-  cursor: pointer;
+  height: 60px;
+  transition: transform 0.3s ease;
 }
 
-nav {
-  margin-top: 10px;
+header img:hover {
+  transform: scale(1.05);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
 }
 
 nav a {
   color: #fff;
-  margin: 0 15px;
   text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
 nav a:hover,
@@ -44,161 +49,176 @@ nav a.active {
   color: #ffeb3b;
 }
 
-/* ======== Seções ======== */
-section {
-  padding: 40px 20px;
-  text-align: center;
-}
-
-/* ======== Hero ======== */
+/* ===== HERO ===== */
 .hero {
-  padding: 60px 20px;
-  background: linear-gradient(to bottom, #ffeb3b, #fbc02d);
-  border-bottom: 4px solid #222;
+  text-align: center;
+  padding: 5rem 2rem;
+  background: linear-gradient(180deg, #000 0%, #1a1a1a 100%);
 }
 
 .hero h1 {
-  font-size: 2rem;
-  color: #111;
-  margin-bottom: 15px;
+  font-size: 2.5rem;
+  color: #ffeb3b;
 }
 
 .hero p {
+  margin-top: 1rem;
   font-size: 1.1rem;
-  color: #333;
-  margin-bottom: 20px;
+  color: #ddd;
 }
 
-.hero button {
-  background: #1c1c1c;
-  color: #fff;
-  border: none;
-  padding: 10px 25px;
-  border-radius: 25px;
-  font-size: 1rem;
-  cursor: pointer;
+.btn {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.8rem 2rem;
+  background: #ffeb3b;
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 30px;
   transition: 0.3s;
 }
 
-.hero button:hover {
-  background: #ffeb3b;
-  color: #1c1c1c;
-}
-
-/* ======== Cards ======== */
-.projetos {
+.btn:hover {
   background: #fff;
-  margin: 30px auto;
-  border-radius: 15px;
-  max-width: 900px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  padding: 25px;
 }
 
-.projetos h2 {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-  color: #1c1c1c;
-}
-
-.projetos p {
-  color: #555;
-  margin-bottom: 25px;
-}
-
+/* ===== GALERIA ===== */
 .galeria {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.galeria h2 {
+  color: #ffeb3b;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 2rem;
 }
 
 .card {
-  position: relative;
-  width: 250px;
-  height: 350px;
-  overflow: hidden;
+  background: #1a1a1a;
   border-radius: 15px;
+  overflow: hidden;
+  width: 300px;
   transition: transform 0.3s;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
-}
-
-.card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
 }
 
 .card:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
 }
 
-.card span {
+.img-container {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.img-container img {
   position: absolute;
-  bottom: 10px;
-  left: 10px;
-  background: rgba(0, 0, 0, 0.7);
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 10px;
-  font-size: 0.9rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease;
 }
 
-/* ======== Contato ======== */
-.contato {
+.img-antes {
+  opacity: 0;
+}
+
+.img-container:hover .img-antes {
+  opacity: 1;
+}
+
+.img-container:hover .img-depois {
+  opacity: 0;
+}
+
+.card p {
+  padding: 1rem;
+  color: #fff;
+  font-size: 1rem;
+}
+
+/* ===== SOBRE ===== */
+.sobre {
+  padding: 4rem 2rem;
   text-align: center;
-  background: #fff;
-  margin: 30px auto;
-  padding: 25px;
-  border-radius: 15px;
-  max-width: 900px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.sobre h2 {
+  color: #ffeb3b;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.sobre p {
+  color: #ddd;
+  max-width: 700px;
+  margin: 1rem auto;
+  line-height: 1.6;
+}
+
+/* ===== CONTATO ===== */
+.contato {
+  padding: 3rem 1rem;
+  text-align: center;
 }
 
 .contato h2 {
-  color: #1c1c1c;
-  margin-bottom: 10px;
+  color: #ffeb3b;
+  margin-bottom: 1rem;
 }
 
 .contato p {
-  color: #333;
-  margin: 5px 0;
+  color: #f1f1f1;
+  margin: 0.5rem 0;
 }
 
 iframe {
-  border-radius: 10px;
   width: 100%;
-  height: 300px;
+  height: 350px;
+  margin-top: 1rem;
   border: none;
+  border-radius: 10px;
 }
 
-/* ======== Footer ======== */
+/* ===== FOOTER ===== */
 footer {
-  background: #1c1c1c;
-  color: #fff;
+  background: #000;
   text-align: center;
-  padding: 15px 0;
+  padding: 1rem;
+  color: #999;
   font-size: 0.9rem;
-  margin-top: 40px;
 }
 
-/* ======== Botão WhatsApp ======== */
-.whatsapp-button {
+/* ===== WHATSAPP ===== */
+.whatsapp-btn {
   position: fixed;
   bottom: 20px;
   right: 20px;
   background: #25d366;
+  color: white;
   border-radius: 50%;
   width: 60px;
   height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: 0.3s;
+  font-size: 1.8rem;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease;
 }
 
-.whatsapp-button:hover {
+.whatsapp-btn:hover {
   transform: scale(1.1);
-  }
+}
