@@ -1,4 +1,4 @@
-/* ===== RESET===== */
+/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
@@ -115,31 +115,16 @@ nav a.active {
   transform: translateY(-5px);
 }
 
-.img-container {
-  position: relative;
+.card img {
   width: 100%;
-  height: 220px;
-  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.img-container img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: opacity 0.5s ease;
-}
-
-.img-antes {
-  opacity: 0;
-}
-
-.img-container:hover .img-antes {
-  opacity: 1;
-}
-
-.img-container:hover .img-depois {
-  opacity: 0;
+.card img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
 .card p {
@@ -148,47 +133,55 @@ nav a.active {
   font-size: 1rem;
 }
 
-/* ===== SOBRE ===== */
-.sobre {
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-.sobre h2 {
-  color: #ffeb3b;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.sobre p {
-  color: #ddd;
-  max-width: 700px;
-  margin: 1rem auto;
-  line-height: 1.6;
-}
-
-/* ===== CONTATO ===== */
-.contato {
-  padding: 3rem 1rem;
-  text-align: center;
-}
-
-.contato h2 {
-  color: #ffeb3b;
-  margin-bottom: 1rem;
-}
-
-.contato p {
-  color: #f1f1f1;
-  margin: 0.5rem 0;
-}
-
-iframe {
+/* ===== MODAL (ZOOM) ===== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
   width: 100%;
-  height: 350px;
-  margin-top: 1rem;
-  border: none;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.modal img {
+  max-width: 90%;
+  max-height: 80%;
   border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.close-btn {
+  color: #ffeb3b;
+  font-size: 2.5rem;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.close-btn:hover {
+  transform: scale(1.2);
+}
+
+.toggle-btn {
+  margin-top: 20px;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 30px;
+  background: #ffeb3b;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.toggle-btn:hover {
+  background: #fff;
 }
 
 /* ===== FOOTER ===== */
