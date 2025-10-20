@@ -1,224 +1,204 @@
-/* ===== RESET ===== */
+/* ======== Reset e Fonte ======== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-  background: linear-gradient(135deg, #ffe75e, #ffba00);
+  background: linear-gradient(135deg, #fdd835, #ffeb3b);
   color: #333;
+  line-height: 1.6;
 }
 
-/* ===== HEADER ===== */
+/* ======== Header ======== */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background: #222;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  background: #1c1c1c;
+  color: #fff;
+  padding: 15px 0;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-.logo img {
-  height: 60px;
+header img {
+  height: 80px;
+  width: auto;
   cursor: pointer;
-  transition: 0.3s;
-  background: transparent;
 }
 
-.logo img:hover {
-  transform: scale(1.05);
+nav {
+  margin-top: 10px;
 }
 
 nav a {
   color: #fff;
+  margin: 0 15px;
   text-decoration: none;
-  margin-left: 1.5rem;
-  font-weight: 500;
+  font-weight: 600;
   transition: 0.3s;
 }
 
 nav a:hover,
 nav a.active {
-  color: #f7d038;
+  color: #ffeb3b;
 }
 
-/* ===== HERO ===== */
-.hero {
+/* ======== Seções ======== */
+section {
+  padding: 40px 20px;
   text-align: center;
-  padding: 5rem 1rem;
-  background: linear-gradient(135deg, #ffec7f, #ffba00);
+}
+
+/* ======== Hero ======== */
+.hero {
+  padding: 60px 20px;
+  background: linear-gradient(to bottom, #ffeb3b, #fbc02d);
+  border-bottom: 4px solid #222;
 }
 
 .hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #111;
+  margin-bottom: 15px;
 }
 
 .hero p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 20px;
 }
 
-.btn-hero {
-  background: #222;
+.hero button {
+  background: #1c1c1c;
   color: #fff;
-  padding: 12px 30px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: bold;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
   transition: 0.3s;
 }
 
-.btn-hero:hover {
-  background: #f7d038;
-  color: #222;
+.hero button:hover {
+  background: #ffeb3b;
+  color: #1c1c1c;
 }
 
-/* ===== GALERIA LINHA DO TEMPO ===== */
-.galeria-timeline {
-  padding: 3rem 1rem;
-  max-width: 1200px;
-  margin: auto;
-  text-align: center;
+/* ======== Cards ======== */
+.projetos {
+  background: #fff;
+  margin: 30px auto;
+  border-radius: 15px;
+  max-width: 900px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 25px;
 }
 
-.section-title {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: #222;
-  position: relative;
+.projetos h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #1c1c1c;
 }
 
-.section-title::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 4px;
-  background: #f7d038;
-  margin: 10px auto 0;
-  border-radius: 2px;
+.projetos p {
+  color: #555;
+  margin-bottom: 25px;
 }
 
-.timeline-container {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-}
-
-.timeline-item {
+.galeria {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  gap: 1rem;
+  gap: 20px;
 }
 
-.timeline-img {
+.card {
   position: relative;
-  flex: 1 1 200px;
-  max-width: 300px;
+  width: 250px;
+  height: 350px;
   overflow: hidden;
   border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
 }
 
-.timeline-img img {
+.card img {
   width: 100%;
-  height: 200px;
+  height: 100%;
   object-fit: cover;
-  transition: transform 0.5s;
+  transition: 0.3s;
 }
 
-.timeline-img span {
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card span {
   position: absolute;
-  bottom: 8px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.6);
+  bottom: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.7);
   color: #fff;
-  padding: 4px 10px;
+  padding: 5px 10px;
   border-radius: 10px;
   font-size: 0.9rem;
 }
 
-.timeline-img:hover img {
-  transform: scale(1.05);
-}
-
-.timeline-desc {
-  flex-basis: 100%;
+/* ======== Contato ======== */
+.contato {
   text-align: center;
-  margin-top: 0.5rem;
+  background: #fff;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 15px;
+  max-width: 900px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
 }
 
-.timeline-desc h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+.contato h2 {
+  color: #1c1c1c;
+  margin-bottom: 10px;
 }
 
-.timeline-desc p {
-  font-size: 1rem;
-  color: #555;
+.contato p {
+  color: #333;
+  margin: 5px 0;
 }
 
-/* ===== WHATSAPP FIXO ===== */
-.whatsapp-btn {
+iframe {
+  border-radius: 10px;
+  width: 100%;
+  height: 300px;
+  border: none;
+}
+
+/* ======== Footer ======== */
+footer {
+  background: #1c1c1c;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
+/* ======== Botão WhatsApp ======== */
+.whatsapp-button {
   position: fixed;
   bottom: 20px;
   right: 20px;
   background: #25d366;
-  color: white;
+  border-radius: 50%;
   width: 60px;
   height: 60px;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
-  text-decoration: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transition: 0.3s;
-  z-index: 999;
 }
 
-.whatsapp-btn:hover {
-  background: #1ebe5b;
-}
-
-/* ===== FOOTER ===== */
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #222;
-  color: #fff;
-  margin-top: 2rem;
-}
-
-/* ===== RESPONSIVO ===== */
-@media (max-width: 800px) {
-  .timeline-item {
-    flex-direction: column;
-    gap: 1.5rem;
+.whatsapp-button:hover {
+  transform: scale(1.1);
   }
-  .timeline-img {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 600px) {
-  header {
-    flex-direction: column;
-  }
-  nav a {
-    margin: 0.5rem;
-  }
-  .hero h1 {
-    font-size: 2rem;
-  }
-}
